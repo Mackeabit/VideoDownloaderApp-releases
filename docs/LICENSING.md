@@ -1,38 +1,59 @@
-# Licensing and corresponding source
+# 라이선스와 외부 구성요소 소스
 
-Starting with version 0.1.6, the copyright holder's own application code uses the VideoDownloaderApp Binary Distribution License in LICENSE. It permits free use and binary redistribution while keeping the original application source private. The owner confirmed rights to the reused application code. Previous GPL-3.0-or-later releases keep their original grants; making their repository private does not revoke recipients' rights. No rights to downloaded media are granted.
+## 앱 이용 조건
 
-## What travels with a binary release
+이 앱은 [VideoDownloaderApp Binary Distribution License](../LICENSE)에 따라 무료 사용과 실행 파일 재배포가 가능합니다. 자체 원본 소스는 제공하지 않습니다. 다운로드하는 콘텐츠의 이용 권한은 별도로 확인해야 합니다.
 
-Provide the portable app ZIP, all matching third-party source ZIP parts, source manifest/inventory and checksums together on the distribution release page without an additional fee or access restriction. Keep the corresponding third-party sources available while distributing the binary. A changing upstream branch or expiring CI artifact is not a replacement for those exact sources. Version 0.1.6 does not require distribution of the application's original source ZIP under its own license, provided the third-party component boundaries and obligations described here remain satisfied. Do not distribute an older GPL application binary without its matching application source obligations.
+외부 구성요소에는 각자의 라이선스가 적용됩니다. 이 앱의 이용 조건은 해당 구성요소가 부여하는 권리를 제한하지 않습니다. 구성요소 목록은 [외부 구성요소 고지](THIRD_PARTY_NOTICES.md), 전체 라이선스 원문과 고지는 실행 ZIP의 `_internal/notices`에서 확인할 수 있습니다. 앱의 **앱 정보 · 라이선스**에서도 고지 폴더를 열 수 있습니다.
 
-The binary includes the application terms, third-party notices, dependency versions, runtime provenance and source index. The **앱 정보 · 라이선스** button opens these notices. The application's original source repository stays private. A separate public distribution repository contains user documentation and release assets; its automatically generated Source code ZIP contains only those public repository files.
+## 소스 자료 내려받기
 
-## Component boundaries and replacement
+[v0.1.6 릴리스](https://github.com/Mackeabit/VideoDownloaderApp-releases/releases/tag/v0.1.6)에서 다음 자료를 함께 제공합니다.
 
-- The own Python modules are compiled to native Windows .pyd files with Cython, then packaged with PyInstaller. The entry dispatcher remains bytecode. This raises the difficulty of reconstructing own code; it does not prevent reverse engineering or hide strings and behavior. No own original .py, generated C or debugging-symbol files belong in the application ZIP.
-- Cython 3.3.0 is an Apache-2.0 build tool; its applicable license/attribution is retained under `_internal/notices/runtime/Cython-3.3.0-LICENSE.txt`. It is not installed on users' systems.
-- Mutagen is GPL-2.0-or-later. The application does not use its optional thumbnail-tagging features; version 0.1.6 excludes Mutagen from the binary and runtime requirements. The installed development environment is not the runtime inventory.
-- Qt Core/Gui/Widgets, PySide6 and shiboken6 are used under LGPLv3 with their third-party terms. Their DLLs, .pyd files and Python support modules remain external under `_internal/PySide6` and `_internal/shiboken6`, rather than being compiled into own modules or embedded as Python bytecode. The release provides the exact QtBase and PySide sources, license texts, build files and attributions. No incompatible GPL-only Qt module is included.
-- To replace these LGPL libraries, close the app, back up the portable folder, build a compatible Python 3.14/Qt 6.12 Windows x64 version following the supplied Qt/PySide source instructions, and replace the matching DLL/.pyd/.py files in those directories. Keep the same module/file paths and compatible ABI. No signing key, developer authorization or application-source recompilation is required for a compatible replacement. The application terms permit library replacement, modifications needed for it, debugging those modifications by reverse engineering and redistribution under the applicable licenses. Frozen acceptance checks that modified external package initializers actually execute.
-- FFmpeg and ffprobe are separate command-line programs invoked through files and arguments, not libraries linked into own application code. The selected BtbN build enables GPL and version3, without nonfree. Its source set includes the exact revision, build scripts, patches and statically linked dependencies.
-- yt-dlp is used from its Unlicense Python package; the licensing of a different upstream prebuilt EXE is not substituted for this package. yt-dlp-ejs includes Unlicense, MIT and ISC material; retain its bundled notices.
-- certifi is MPL-2.0. Its exact corresponding source and notice remain in the source set. Other Python dependencies retain their respective notices.
-- Node uses MIT plus bundled third-party terms. Python uses PSF plus bundled third-party terms. PyInstaller's bootloader license includes its bootloader exception. Build-only packages in the inventory are not all shipped runtime code.
-- Pretendard 1.3.9 Regular and SemiBold are unmodified OFL-1.1 fonts. Their original files, full copyright/license and pinned provenance remain beside the fonts under `_internal/assets/fonts/pretendard`, with notices under `_internal/notices/fonts`. No system-wide font installation occurs.
+- `VideoDownloader-0.1.6-third-party-sources-01.zip`
+- `VideoDownloader-0.1.6-third-party-sources-02.zip`
+- `source-manifest.json`, `source-file-inventory.json`
+- 파일 검증용 `SHA256SUMS.txt`
 
-## FFmpeg provenance and rebuilding
+두 소스 ZIP은 서로 다른 외부 구성요소 자료를 담으므로 모두 받으세요. 일반적인 앱 실행에는 실행 ZIP만 필요합니다. GitHub가 자동 생성하는 `Source code` 압축 파일은 이 안내 문서 저장소의 내용이며 위의 대응 소스 자료를 대신하지 않습니다.
 
-Selected binary: BtbN `autobuild-2026-10-30-13-01`, `ffmpeg-n9.0.2-39-g7adfbe40dc-win64-gpl-9.0.zip`.
+실행 파일을 재배포할 때는 앱 이용 조건, 외부 구성요소의 라이선스·고지와 필요한 대응 소스 접근 정보를 함께 유지하세요. 대응 소스는 실행 파일과 같은 배포 위치에서 추가 비용이나 접근 제한 없이 제공하고, 실행 파일을 배포하는 동안 이용할 수 있도록 유지해야 합니다.
 
-- CI run: https://github.com/BtbN/FFmpeg-Builds/actions/runs/41053493863
-- Build scripts: `5031c6f1082414e53688d39e521849905071070d`
-- FFmpeg source: `7adfbe40dcde598f93a6963d2f7b22cd75202ccc`
-- Target image both produced and consumed by that run: `sha256:f5d2004dc8f0b8390042b8b7454c4aa99a84a945559b2ddd089fd5c071eef0b7`
-- The exact dependency archives named by the target image build log are collected from that run's download-cache artifact. The release source manifest records content hashes, not only cache-key names.
+## 구성요소별 안내
 
-The upstream source archive includes Docker build scripts, variant `win64 gpl 9.0`, patches and download recipes. Dependency sources belong at the build tree's `.cache/downloads` paths recorded in the manifest. Consult `vendor/FFMPEG_SOURCE.md` for exact inputs, additional Rust dependencies, reproduction steps and verification limits. We test the upstream binary; we do not claim to have independently rebuilt it bit for bit.
+- **Qt Core/Gui/Widgets, PySide6, shiboken6**: LGPLv3와 포함된 외부 구성요소 약관을 적용합니다. QtBase와 PySide의 해당 버전 소스, 빌드 자료, 라이선스와 저작권 고지를 제공합니다.
+- **FFmpeg·ffprobe**: 별도 명령줄 프로그램으로 실행합니다. 포함된 BtbN 빌드는 GPLv3 설정이며 nonfree 옵션을 사용하지 않습니다. 대응 소스에는 정확한 FFmpeg 리비전, 빌드 스크립트, 패치와 정적으로 연결된 의존성이 포함됩니다.
+- **certifi**: MPL-2.0 고지와 해당 버전 대응 소스를 제공합니다.
+- **yt-dlp·yt-dlp-ejs**: Python 패키지에 적용되는 Unlicense 및 MIT·ISC 고지를 유지합니다.
+- **Python·Node**: 각각 PSF·MIT 및 함께 제공되는 외부 구성요소 약관을 적용합니다.
+- **PyInstaller 부트로더**: 부트로더 예외가 포함된 라이선스를 적용합니다.
+- **Cython 생성 런타임**: Apache-2.0 고지는 `_internal/notices/runtime/Cython-3.3.0-LICENSE.txt`에 포함됩니다.
+- **Pretendard 1.3.9**: 수정하지 않은 Regular·SemiBold 글꼴을 OFL-1.1로 제공합니다. 원본 글꼴·저작권·라이선스는 `_internal/assets/fonts/pretendard`와 `_internal/notices/fonts`에 포함됩니다.
 
-Qt/PySide sources include their build instructions; Qt requires its supported Windows C++ toolchain. General-purpose operating systems, compilers and system libraries are not part of the corresponding-source archive set.
+세부 조건은 각 구성요소의 라이선스 원문을 따릅니다.
 
-Primary references: [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.html), [Qt LGPL obligations](https://www.qt.io/development/open-source-lgpl-obligations), [FFmpeg license and legal considerations](https://ffmpeg.org/legal.html), [PyInstaller license](https://pyinstaller.org/en/stable/license.html).
+## LGPL 라이브러리 교체
+
+Qt/PySide/shiboken의 DLL·확장 모듈·Python 지원 파일은 `_internal/PySide6`, `_internal/shiboken6` 등에 별도 파일로 배치되어 있습니다.
+
+1. 앱을 닫고 전체 프로그램 폴더를 백업합니다.
+2. 제공된 Qt/PySide 소스의 빌드 안내에 따라 Python 3.14·Qt 6.12·Windows x64와 호환되는 라이브러리를 준비합니다.
+3. 모듈 경로와 호환되는 ABI를 유지하면서 해당 DLL·.pyd·.py 파일과 필요한 의존성을 교체합니다.
+
+호환되는 교체에 제작자의 승인·서명 키·자체 앱 소스 재컴파일은 필요하지 않습니다. 앱 이용 조건은 라이브러리 교체에 필요한 수정, 수정 사항의 디버깅을 위한 역분석 및 해당 라이선스에 따른 재배포를 허용합니다.
+
+## 외부 구성요소 빌드 자료
+
+소스 묶음의 `FFMPEG_SOURCE.md`에는 정확한 입력 자료와 재빌드 절차가 있습니다. `source-manifest.json`은 각 소스 자료의 내용 체크섬과 출처를 기록합니다. Qt/PySide 소스에도 각 프로젝트의 빌드 안내가 포함되어 있습니다.
+
+FFmpeg 빌드 식별 정보:
+
+- 배포 바이너리: BtbN `autobuild-2026-10-30-13-01`, `ffmpeg-n9.0.2-39-g7adfbe40dc-win64-gpl-9.0.zip`
+- 빌드 스크립트: `5031c6f1082414e53688d39e521849905071070d`
+- FFmpeg 리비전: `7adfbe40dcde598f93a6963d2f7b22cd75202ccc`
+- 빌드 실행: https://github.com/BtbN/FFmpeg-Builds/actions/runs/41053493863
+- 해당 실행에서 생성·사용한 대상 이미지: `sha256:f5d2004dc8f0b8390042b8b7454c4aa99a84a945559b2ddd089fd5c071eef0b7`
+
+정확한 의존성 아카이브와 빌드 자료는 릴리스 소스 묶음에 포함됩니다. 일반 운영체제·컴파일러·시스템 라이브러리는 이 묶음의 제공 범위에 포함하지 않습니다. 외부 바이너리를 독립적으로 비트 단위까지 동일하게 재빌드했다는 의미는 아닙니다.
+
+참고: [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.html) · [Qt LGPL 안내](https://www.qt.io/development/open-source-lgpl-obligations) · [FFmpeg 라이선스](https://ffmpeg.org/legal.html) · [PyInstaller 라이선스](https://pyinstaller.org/en/stable/license.html)

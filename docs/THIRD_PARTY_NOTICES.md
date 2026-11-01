@@ -4,7 +4,7 @@ The Windows bundle contains Python, PySide6/shiboken6, Qt Core/Gui/Widgets and t
 
 | Component | Version / source | License summary |
 | --- | --- | --- |
-| VideoDownloaderApp | 0.1.6; own native modules | VideoDownloaderApp Binary Distribution License; earlier GPL grants remain valid |
+| VideoDownloaderApp | 0.1.6 | VideoDownloaderApp Binary Distribution License |
 | Pretendard | 1.3.9; unmodified Regular and SemiBold OpenType fonts | SIL Open Font License 1.1; copyright and license in `_internal/notices/fonts/Pretendard-OFL.txt` |
 | Python | 3.14.10; official Windows x64 NuGet package and matching source archive | PSF and included third-party terms |
 | PySide6 / shiboken6 / QtBase | 6.12.0; exact Qt/PySide source archives | Open-source LGPL/GPL options and third-party terms |
@@ -16,10 +16,10 @@ The Windows bundle contains Python, PySide6/shiboken6, Qt Core/Gui/Widgets and t
 | FFmpeg / ffprobe | n9.0.2-39-g7adfbe40dc-20261030; BtbN win64-gpl-9.0 | GPLv3 build with included dependency terms; no nonfree flag |
 | PyInstaller bootloader | 6.22.3 | GPL with bootloader exception |
 
-Full application and third-party license texts are under `_internal/notices`; QtBase/PySide attributions and FFmpeg dependency notices retain source-relative paths. Qt/PySide/shiboken DLLs, extension modules and Python support files remain external and replaceable. Mutagen and unused GPL-only Qt modules are excluded from this binary. The original Node 22 notice is historical local material and is excluded from this release.
+Full application and third-party license texts are under `_internal/notices`; QtBase/PySide attributions and FFmpeg dependency notices retain source-relative paths. Qt/PySide/shiboken DLLs, extension modules and Python support files remain external and replaceable.
 
 Pretendard is loaded from the portable bundle without a system font installation. Its exact unmodified font files, copyright/license and pinned upstream provenance are included under `_internal/assets/fonts/pretendard`. The font remains OFL-1.1, independently of the application's license. Upstream: https://github.com/orioncactus/pretendard/releases/tag/v1.3.9.
 
-Corresponding source is provided as matching release source ZIP parts, indexed by `source-manifest.json`. Distribute all source parts alongside the binary; do not substitute generic upstream links or expiring CI artifacts. See SOURCE_AND_LICENSES.md in the portable folder, or docs/LICENSING.md in the source tree, for obligations, provenance and build instructions. Consult docs/PUBLIC_RELEASE.md for remaining release blockers.
+Corresponding source is provided as matching release source ZIP parts, indexed by `source-manifest.json`. Distribute all source parts alongside the binary; do not substitute generic upstream links or expiring CI artifacts. See SOURCE_AND_LICENSES.md in the portable folder or [Licensing and sources](LICENSING.md) for redistribution, library replacement and source instructions.
 
-Primary upstream projects: https://www.python.org/ · https://www.qt.io/ · https://github.com/yt-dlp/yt-dlp · https://github.com/yt-dlp/ejs · https://mutagen.readthedocs.io/ · https://nodejs.org/ · https://github.com/BtbN/FFmpeg-Builds · https://pyinstaller.org/
+Primary upstream projects: https://www.python.org/ · https://www.qt.io/ · https://github.com/yt-dlp/yt-dlp · https://github.com/yt-dlp/ejs · https://nodejs.org/ · https://github.com/BtbN/FFmpeg-Builds · https://pyinstaller.org/
