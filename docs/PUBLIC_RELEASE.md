@@ -6,13 +6,13 @@ Date: 2026-11-01. Target: Windows x64 on this Windows host. Distribution target:
 
 Troubleshooting advice, extraction-only link probing, sanitized report preview/copy/export, explicit anonymous update checks, and maintainer report/reproduction tooling. Report exports exclude original URLs, titles, paths, account data and raw logs by default; hostname inclusion is explicit opt-in. Probe tasks run in supervised child processes with bounded timeouts/cancellation and owned temporary-directory cleanup. Updates only open a release page; they do not install executable code.
 
-Own code is compiled with Cython 3.3.0 and MSVC 2022 into 17 native modules. The ZIP contains no original own .py or own .pyc/PYZ modules. The minimal launch dispatcher remains bytecode. This increases reconstruction difficulty; it is not a guarantee against reverse engineering. Historic personal site strings and default custom registrations were removed; neutral fixtures retain adapter boundary coverage. Engine-provided site names are not the creator's browsing history.
+Own code is compiled with Cython 3.3.0 and MSVC 2022 into 17 native modules. The ZIP contains no original own .py or own .pyc/PYZ modules. The minimal launch dispatcher remains bytecode. This increases reconstruction difficulty; it is not a guarantee against reverse engineering. Distinct new numeric-page URLs retain full-URL hash names; legacy numeric filenames are recognized only when their files already exist, preserving resumable output without merging new URLs by numeric ID alone. Historic personal site strings and default custom registrations were removed; neutral fixtures retain adapter boundary coverage. Engine-provided site names are not the creator's browsing history.
 
 The new own-code binary license permits free use/redistribution and retains third-party rights. Earlier GPL grants remain valid. Unused optional Mutagen is excluded; Qt/PySide/shiboken Python support files and DLL/.pyd files remain external and replaceable. Exact required external sources/notices remain supplied, including GPL FFmpeg as separate command-line programs and MPL certifi. This is not an assertion that compiler settings alone satisfy license obligations.
 
 ## Evidence
 
-- 90 source regression tests passed, and all 90 passed with the 17 native own modules loaded. The source-child portions of that suite still launch development Python; separate frozen acceptance verifies the compiled subprocess path.
+- 91 source regression tests passed, and all 91 passed with the 17 native own modules loaded. The source-child portions of that suite still launch development Python; separate frozen acceptance verifies the compiled subprocess path.
 - Relocated frozen EXE passed with Windows-only PATH, a Korean/spaced folder and isolated state: worker communication, queued success/failure, full media decode, cancellation, HTTP Range resume, preservation of complete/partial outputs, storage failure behavior, compact layout, normal shutdown, icon and Pretendard glyph/weight checks.
 - Frozen support worker found metadata on a controlled HTML5 page, left the original job unchanged and removed its temporary directory. Report preview excluded a sentinel URL token; update dialog behavior passed. Unit tests additionally cover update API validation, offline/rate-limit/missing-release outcomes, report schema/size limits, hostile report types and export failures.
 - Native GUI layouts at 100%, 125% and 150% display scaling passed. The 760×440 minimum window keeps two full queue rows and visible action buttons. Troubleshooting and update dialogs were rendered and inspected.
@@ -23,7 +23,7 @@ The new own-code binary license permits free use/redistribution and retains thir
 
 ## Distribution assets
 
-The ordinary-user file is `VideoDownloader-0.1.6-win-x64.zip` (217,809,038 bytes), SHA-256 `534441f3a352b0af2dbccd69129744730cbeae0662ff54b4657facf9542cf99b`.
+The ordinary-user file is `VideoDownloader-0.1.6-win-x64.zip` (217,809,728 bytes), SHA-256 `83cac2f08f973c28bbc6a1b431cb3b1841ae0cd23920d4528ba13fe7dbb842ad`.
 
 Two third-party source ZIP parts contain all 414 indexed source/provenance members, each validated against the retained manifest and read back after streaming from the prior verified release. No additional extracted source cache was created. The other assets are source-manifest.json, source-file-inventory.json, release-manifest.json and SHA256SUMS.txt. No own application source ZIP is included. GitHub's automatic source ZIP for the public distribution repository contains its documentation only.
 
