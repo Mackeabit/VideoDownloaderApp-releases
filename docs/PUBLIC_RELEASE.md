@@ -12,7 +12,7 @@ The new own-code binary license permits free use/redistribution and retains thir
 
 ## Evidence
 
-- 91 source regression tests passed, and all 91 passed with the 17 native own modules loaded. The source-child portions of that suite still launch development Python; separate frozen acceptance verifies the compiled subprocess path.
+- 92 source regression tests passed, and all 92 passed with the 17 native own modules loaded. The source-child portions of that suite still launch development Python; separate frozen acceptance verifies the compiled subprocess path. Legacy media-file detection runs only in the download worker; queue identity calculation does not scan media directories on the Qt event thread.
 - Relocated frozen EXE passed with Windows-only PATH, a Korean/spaced folder and isolated state: worker communication, queued success/failure, full media decode, cancellation, HTTP Range resume, preservation of complete/partial outputs, storage failure behavior, compact layout, normal shutdown, icon and Pretendard glyph/weight checks.
 - Frozen support worker found metadata on a controlled HTML5 page, left the original job unchanged and removed its temporary directory. Report preview excluded a sentinel URL token; update dialog behavior passed. Unit tests additionally cover update API validation, offline/rate-limit/missing-release outcomes, report schema/size limits, hostile report types and export failures.
 - Native GUI layouts at 100%, 125% and 150% display scaling passed. The 760×440 minimum window keeps two full queue rows and visible action buttons. Troubleshooting and update dialogs were rendered and inspected.
@@ -23,7 +23,7 @@ The new own-code binary license permits free use/redistribution and retains thir
 
 ## Distribution assets
 
-The ordinary-user file is `VideoDownloader-0.1.6-win-x64.zip` (217,809,728 bytes), SHA-256 `83cac2f08f973c28bbc6a1b431cb3b1841ae0cd23920d4528ba13fe7dbb842ad`.
+The ordinary-user file is `VideoDownloader-0.1.6-win-x64.zip` (217,810,360 bytes), SHA-256 `1b96507707f63ec448436a4f98600a46912dd707702cf85bd794905d087ad311`.
 
 Two third-party source ZIP parts contain all 414 indexed source/provenance members, each validated against the retained manifest and read back after streaming from the prior verified release. No additional extracted source cache was created. The other assets are source-manifest.json, source-file-inventory.json, release-manifest.json and SHA256SUMS.txt. No own application source ZIP is included. GitHub's automatic source ZIP for the public distribution repository contains its documentation only.
 
