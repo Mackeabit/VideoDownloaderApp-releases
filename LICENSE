@@ -1,0 +1,35 @@
+VideoDownloaderApp Binary Distribution License
+Copyright (c) 2026 Mackeabit
+SPDX-License-Identifier: LicenseRef-VideoDownloaderApp-Binary
+
+These terms apply to the copyright holder's own application code in
+VideoDownloaderApp version 0.1.6 and later releases carrying this license.
+
+You may use, copy and redistribute the application binaries without charge,
+for personal or commercial purposes. Retain this license and all applicable
+third-party notices, licenses and corresponding-source access information.
+The application's original source code is not supplied or licensed for reuse
+under these terms. Rights not expressly granted are reserved, subject to
+applicable law and the exceptions below.
+
+THIRD-PARTY RIGHTS
+Third-party components remain governed by their own licenses. These terms do
+not restrict any right granted by those licenses. In particular, you may
+replace the LGPL libraries with compatible modified versions, modify the
+application as needed to use those libraries, reverse engineer it to debug
+such modifications, and redistribute the resulting combined work in
+accordance with the applicable licenses. No authorization or signing key from
+the application developer is required to exercise those rights.
+
+PREVIOUS RELEASES
+These terms do not revoke or change GPL-3.0-or-later permissions previously
+granted for earlier releases, including versions through 0.1.5. Recipients of
+those versions retain their rights under the licenses that accompanied them.
+
+NO WARRANTY
+To the extent permitted by applicable law, this software is provided "AS IS",
+without warranty of any kind. The copyright holder is not liable for damages
+arising from its use. No rights to third-party media or trademarks are granted.
+
+See SOURCE_AND_LICENSES.md and THIRD_PARTY_NOTICES.md in the binary package
+for component boundaries, notices, replacement instructions and sources.

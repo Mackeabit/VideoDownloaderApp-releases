@@ -1,0 +1,32 @@
+name: 다운로드 문제
+description: 실패 현상과 직접 확인한 진단 정보를 알려 주세요.
+title: "[다운로드 문제] "
+body:
+  - type: markdown
+    attributes:
+      value: "대기열 전체, 쿠키, 계정 정보, 비공개 주소와 개인 파일을 올리지 마세요. 진단 보고서는 앱에서 미리 본 뒤 직접 첨부할 수 있습니다."
+  - type: input
+    id: version
+    attributes:
+      label: 앱 버전
+      placeholder: "예: 0.1.6"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 어떤 문제가 발생했나요?
+      description: 재현 순서와 화면에 표시된 오류를 적어 주세요.
+    validations:
+      required: true
+  - type: input
+    id: public_url
+    attributes:
+      label: 공개해도 되는 재현 URL (선택)
+      description: 로그인 정보나 비밀 토큰이 포함된 주소는 적지 마세요.
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: 진단 보고서 (선택)
+      description: 문제 해결 화면에서 미리 본 JSON을 붙여넣거나 파일을 첨부하세요.
+      render: json
