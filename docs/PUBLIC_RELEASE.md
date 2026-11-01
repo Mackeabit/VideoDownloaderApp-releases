@@ -1,12 +1,12 @@
-# v0.1.7 변경사항
+# v0.1.8 변경사항
 
-[Windows 64비트 실행 ZIP 다운로드](https://github.com/Mackeabit/VideoDownloaderApp-releases/releases/download/v0.1.7/VideoDownloader-0.1.7-win-x64.zip)
+[Windows 64비트 실행 ZIP 다운로드](https://github.com/Mackeabit/VideoDownloaderApp-releases/releases/download/v0.1.8/VideoDownloader-0.1.8-win-x64.zip)
 
 ## 수정 사항
 
-해상도 정보가 없는 HTML5/MP4 영상이 화질 상한 필터에서 제외되어 다운로드에 실패하던 문제를 수정했습니다.
+공개 조회 API와 별도 플레이어를 사용하는 일부 영상 페이지의 다운로드 경로를 추가했습니다. 기본 추출로 처리되지 않는 경우 지원되는 플레이어 경로를 자동으로 확인합니다.
 
-해상도 정보가 없으면 다운로드한 파일의 실제 해상도로 상한을 검사합니다. 상한을 넘으면 실패로 표시하고 파일은 보존합니다. 해상도가 확인된 상한 초과 형식은 다운로드 전에 제외하며, 자동 변환은 하지 않습니다.
+**링크 재분석**도 같은 경로를 사용하도록 개선했습니다. 기존 화질 상한과 저장 파일 검사, 취소·이어받기 동작은 유지합니다.
 
 ## 실행과 업데이트
 

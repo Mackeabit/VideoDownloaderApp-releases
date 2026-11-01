@@ -4,7 +4,7 @@ The Windows bundle contains Python, PySide6/shiboken6, Qt Core/Gui/Widgets and t
 
 | Component | Version / source | License summary |
 | --- | --- | --- |
-| VideoDownloaderApp | 0.1.7 | VideoDownloaderApp Binary Distribution License |
+| VideoDownloaderApp | 0.1.8 | VideoDownloaderApp Binary Distribution License |
 | Pretendard | 1.3.9; unmodified Regular and SemiBold OpenType fonts | SIL Open Font License 1.1; copyright and license in `_internal/notices/fonts/Pretendard-OFL.txt` |
 | Python | 3.14.10; official Windows x64 NuGet package and matching source archive | PSF and included third-party terms |
 | PySide6 / shiboken6 / QtBase | 6.12.0; exact Qt/PySide source archives | Open-source LGPL/GPL options and third-party terms |

@@ -2,7 +2,7 @@
 
 Windows 64비트용 무료 영상 다운로드 앱입니다. 여러 영상 링크를 대기열에 모아 차례로 저장할 수 있습니다.
 
-**[⬇ v0.1.7 Windows 무설치 ZIP 다운로드](https://github.com/Mackeabit/VideoDownloaderApp-releases/releases/download/v0.1.7/VideoDownloader-0.1.7-win-x64.zip)**
+**[⬇ v0.1.8 Windows 무설치 ZIP 다운로드](https://github.com/Mackeabit/VideoDownloaderApp-releases/releases/download/v0.1.8/VideoDownloader-0.1.8-win-x64.zip)**
 
 [사용 안내](docs/USER_GUIDE.md) · [문제 해결](docs/SUPPORT.md) · [문제 제보](https://github.com/Mackeabit/VideoDownloaderApp-releases/issues/new/choose) · [변경사항](docs/PUBLIC_RELEASE.md)
 

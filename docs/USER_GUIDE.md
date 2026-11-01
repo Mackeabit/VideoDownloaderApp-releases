@@ -1,8 +1,8 @@
-# 영상 다운로드 0.1.7 사용 안내
+# 영상 다운로드 0.1.8 사용 안내
 
 ## 실행과 다운로드
 
-1. [v0.1.7 실행 ZIP](https://github.com/Mackeabit/VideoDownloaderApp-releases/releases/download/v0.1.7/VideoDownloader-0.1.7-win-x64.zip)을 받아 전체 압축을 풉니다.
+1. [v0.1.8 실행 ZIP](https://github.com/Mackeabit/VideoDownloaderApp-releases/releases/download/v0.1.8/VideoDownloader-0.1.8-win-x64.zip)을 받아 전체 압축을 풉니다.
 2. `VideoDownloader.exe`를 실행합니다. 옆의 `_internal` 폴더도 필요합니다.
 3. 영상 URL을 한 줄에 하나씩 입력합니다.
 4. 저장 폴더와 화질 상한을 선택하고 **대기열에 추가**를 누릅니다.
@@ -36,6 +36,8 @@ MP4는 우선 선택하는 형식이며, 코덱을 변환하지는 않습니다.
 **링크 추가**와 **상세 정보** 영역을 접으면 목록을 더 넓게 볼 수 있습니다.
 
 ## 실패했을 때
+
+0.1.8부터 일부 API·별도 플레이어 방식의 영상 링크도 자동으로 처리합니다. 사이트 구조나 접근 제한에 따라 지원 여부는 달라질 수 있습니다.
 
 실패·취소·중단 항목을 선택하고 **문제 해결**을 누르세요. 원인 안내, 링크 재분석, 진단 보고서 미리보기·복사·저장을 사용할 수 있습니다. [문제 해결 안내](SUPPORT.md)
 
