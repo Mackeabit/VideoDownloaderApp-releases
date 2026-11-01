@@ -8,10 +8,10 @@
 
 ## 소스 자료 내려받기
 
-[v0.1.8 릴리스](https://github.com/Mackeabit/VideoDownloaderApp-releases/releases/tag/v0.1.8)에서 다음 자료를 함께 제공합니다.
+[v0.1.9 릴리스](https://github.com/Mackeabit/VideoDownloaderApp-releases/releases/tag/v0.1.9)에서 다음 자료를 함께 제공합니다.
 
-- `VideoDownloader-0.1.8-third-party-sources-01.zip`
-- `VideoDownloader-0.1.8-third-party-sources-02.zip`
+- `VideoDownloader-0.1.9-third-party-sources-01.zip`
+- `VideoDownloader-0.1.9-third-party-sources-02.zip`
 - `source-manifest.json`, `source-file-inventory.json`
 - 파일 검증용 `SHA256SUMS.txt`
 

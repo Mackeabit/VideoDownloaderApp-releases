@@ -2,7 +2,7 @@
 
 Windows 64비트용 무료 영상 다운로드 앱입니다. 여러 영상 링크를 대기열에 모아 차례로 저장할 수 있습니다.
 
-**[⬇ v0.1.8 Windows 무설치 ZIP 다운로드](https://github.com/Mackeabit/VideoDownloaderApp-releases/releases/download/v0.1.8/VideoDownloader-0.1.8-win-x64.zip)**
+**[⬇ v0.1.9 Windows 무설치 ZIP 다운로드](https://github.com/Mackeabit/VideoDownloaderApp-releases/releases/download/v0.1.9/VideoDownloader-0.1.9-win-x64.zip)**
 
 [사용 안내](docs/USER_GUIDE.md) · [문제 해결](docs/SUPPORT.md) · [문제 제보](https://github.com/Mackeabit/VideoDownloaderApp-releases/issues/new/choose) · [변경사항](docs/PUBLIC_RELEASE.md)
 
@@ -12,13 +12,14 @@ Windows 64비트용 무료 영상 다운로드 앱입니다. 여러 영상 링�
 
 1. 위의 ZIP 파일을 내려받아 **전체 압축을 풉니다**.
 2. `VideoDownloader.exe`를 실행합니다. 옆의 `_internal` 폴더도 함께 보관하세요.
-3. 영상 링크를 한 줄씩 입력하고 저장 폴더와 화질을 선택합니다.
-4. **대기열에 추가 → 다운로드 시작**을 누릅니다.
+3. 영상 링크를 한 줄씩 입력하고 저장 폴더를 선택합니다.
+4. **대기열에 추가**를 눌러 URL 분석과 영상별 화질 선택을 마친 뒤 **다운로드 시작**을 누릅니다.
 
 별도 설치나 관리자 권한이 필요하지 않습니다. Python·Node·FFmpeg도 앱에 포함되어 있습니다.
 
 ## 주요 기능
 
+- URL 사전 분석, 영상별 화질 선택과 실패 URL 재분석
 - 여러 링크의 순차 다운로드와 대기열 저장
 - 진행률 확인, 취소·재시도·지원되는 부분 파일 이어받기
 - 실패 원인 안내, 링크 재분석, 진단 보고서 미리보기·저장
