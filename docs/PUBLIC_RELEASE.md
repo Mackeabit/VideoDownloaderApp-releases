@@ -1,19 +1,16 @@
-# v0.1.6 변경사항
+# v0.1.7 변경사항
 
-[Windows 64비트 실행 ZIP 다운로드](https://github.com/Mackeabit/VideoDownloaderApp-releases/releases/download/v0.1.6/VideoDownloader-0.1.6-win-x64.zip)
+[Windows 64비트 실행 ZIP 다운로드](https://github.com/Mackeabit/VideoDownloaderApp-releases/releases/download/v0.1.7/VideoDownloader-0.1.7-win-x64.zip)
 
-## 새 기능과 개선
+## 수정 사항
 
-- **문제 해결**: 실패 원인 안내와 링크 재분석
-- **진단 보고서**: 공유 전 미리보기, 복사와 파일 저장
-- **업데이트 확인**: 최신 공개 버전 조회와 다운로드 페이지 연결
-- 대기열 저장 실패 처리와 작은 창에서의 화면 배치 개선
+해상도 정보가 없는 HTML5/MP4 영상이 화질 상한 필터에서 제외되어 다운로드에 실패하던 문제를 수정했습니다.
 
-진단 보고서는 자동 전송하지 않으며, 원본 URL·제목·개인 경로·계정 정보·전체 로그를 제외합니다. 사이트 이름 포함 여부는 사용자가 선택합니다.
+해상도 정보가 없으면 다운로드한 파일의 실제 해상도로 상한을 검사합니다. 상한을 넘으면 실패로 표시하고 파일은 보존합니다. 해상도가 확인된 상한 초과 형식은 다운로드 전에 제외하며, 자동 변환은 하지 않습니다.
 
 ## 실행과 업데이트
 
-ZIP 전체를 풀고 `VideoDownloader.exe`를 실행하세요. 별도 설치는 필요하지 않습니다.
+ZIP 전체를 풀고 `VideoDownloader.exe`를 실행하세요. Python·Node·FFmpeg를 별도로 설치할 필요가 없습니다.
 
 기존 버전을 닫고 새 ZIP을 별도 폴더에 풀어 실행하면 대기열과 설정을 계속 사용할 수 있습니다. 영상과 부분 파일은 저장 폴더에 보존됩니다. [사용 안내](USER_GUIDE.md)
 
